@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://6n88x088hdw8"]
+[gd_scene load_steps=7 format=3 uid="uid://6n88x088hdw8"]
 
 [ext_resource type="Texture2D" uid="uid://dfdwynt634lk5" path="res://assets/kenney_1-bit-pack/Tilesheet/monochrome-transparent_packed.png" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://chei3iilptmep" path="res://scenes/knight.tscn" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://doculq6pdh0jr" path="res://scenes/hud.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://dekyfjsdqhb72" path="res://scenes/objective_item.tscn" id="4_k0juu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rwgxs"]
 texture = ExtResource("1_nnsk1")
@@ -2180,3 +2181,9 @@ scale = Vector2(0.125, 0.125)
 [node name="Camera2D" type="Camera2D" parent="Knight"]
 
 [node name="HUD" parent="." instance=ExtResource("3_4wyf3")]
+
+[node name="ObjectiveItem" parent="." instance=ExtResource("4_k0juu")]
+position = Vector2(267, 229)
+
+[node name="ObjectiveItem2" parent="." instance=ExtResource("4_k0juu")]
+position = Vector2(203, 200)

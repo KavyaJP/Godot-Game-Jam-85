@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dekyfjsdqhb72"]
+
+[ext_resource type="Texture2D" uid="uid://drqj25o5j744n" path="res://assets/kenney_1-bit-pack/Tilesheet/colored_packed.png" id="1_7cthf"]
+[ext_resource type="Script" uid="uid://dmucy26lf2lxf" path="res://scripts/objective_item.gd" id="1_umbua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cthf"]
+size = Vector2(16, 16)
+
+[node name="ObjectiveItem" type="Area2D"]
+script = ExtResource("1_umbua")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7cthf")
+region_enabled = true
+region_rect = Rect2(16, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7cthf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
